@@ -52,12 +52,12 @@ public class ManagersRestController {
     }
 
     /**
-     * Delete task from managers
+     * Delete report from managers
      *
      * @param id     managers id
      * @param taskId task id
      */
-    @Operation(summary = "Delete task from managers")
+    @Operation(summary = "Delete report from managers")
     @DeleteMapping("/managers/{id}/report/{taskId}")
     public void deletemanagersTask(@PathVariable String id, @PathVariable String taskId) {
         employeeRepository
@@ -77,12 +77,12 @@ public class ManagersRestController {
     }
 
     /**
-     * Create Employee task
+     * add Employee to manager
      *
      * @param id      emploeyr id
      * @param employee employee object
      */
-    @Operation(summary = "Create Employee task")
+    @Operation(summary = "add Employee to manager")
     @PostMapping("/managers/{id}/employee")
     public void addEmployeetoEmployee(@PathVariable String id, @RequestBody Employee employee) {
         employeeRepository

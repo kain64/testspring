@@ -36,7 +36,7 @@ public class Report {
     private Date finishDate;
 
     /**
-     * current Report status
+     * reporter
      */
     @Setter @Getter
     @DBRef

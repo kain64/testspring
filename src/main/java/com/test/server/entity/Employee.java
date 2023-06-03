@@ -55,11 +55,12 @@ public class Employee {
     /**
      * Assigned tasks
      */
+    @Builder.Default
     @Getter @Setter
     private Set<Task>  tasks= new HashSet<>();
 
     /**
-     * Assigned tasks
+     * photo
      */
     @Getter @Setter private byte[] photo;
 
@@ -72,6 +73,7 @@ public class Employee {
      * List of related Employees
      */
     @DBRef
+    @Builder.Default
     @Getter @Setter
     private Set<Employee> employees = new HashSet<>();
 
@@ -79,10 +81,11 @@ public class Employee {
      * List of related Employees
      */
     @Getter @Setter
+    @Builder.Default
     private Set<Report> reports = new HashSet<>();
 
     /**
-     * add tasks to manager
+     * add tasks
      * @param newTask task object
      */
     public void addTask(Task newTask) {
@@ -91,7 +94,7 @@ public class Employee {
 
     /**
      * delete task from manager
-     * @param report task object
+     * @param task task object
      */
     public void deleteTask(Task task) {
         tasks.remove(task);

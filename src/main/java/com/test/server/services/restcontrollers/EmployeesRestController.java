@@ -76,12 +76,12 @@ public class EmployeesRestController {
     }
 
     /**
-     * Edit new  Employee
+     * Edit  Employee
      * @param id          Employee id
      * @param newEmployee modified Employee
      */
     @PostMapping("/employee/{id}")
-    @Operation(summary = "Edit new  Employee")
+    @Operation(summary = "Edit  Employee")
     @Transactional
     public void editEmployee(@PathVariable String id, @RequestBody Employee newEmployee) {
         //check if id exist

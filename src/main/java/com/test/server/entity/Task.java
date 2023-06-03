@@ -41,11 +41,7 @@ public class Task {
     @Getter @Setter
     private Date finishDate;
 
-    /**
-     * real date finish date
-     */
-    @Getter @Setter
-    private Date reaCreationDate;
+
     /**
      * current task status
      */
@@ -57,12 +53,12 @@ public class Task {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return Objects.equals(id, task.id) && Objects.equals(description, task.description) && Objects.equals(creationDate, task.creationDate) && Objects.equals(finishDate, task.finishDate) && Objects.equals(reaCreationDate, task.reaCreationDate) && status == task.status;
+        return Objects.equals(id, task.id) && Objects.equals(description, task.description) && Objects.equals(creationDate, task.creationDate) && Objects.equals(finishDate, task.finishDate) && status == task.status;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description, creationDate, finishDate, reaCreationDate, status);
+        return Objects.hash(id, description, creationDate, finishDate,  status);
     }
 
     @Override
@@ -72,7 +68,6 @@ public class Task {
                 ", description='" + description + '\'' +
                 ", creationDate=" + creationDate +
                 ", finishDate=" + finishDate +
-                ", reaCreationDate=" + reaCreationDate +
                 ", status=" + status +
                 '}';
     }
